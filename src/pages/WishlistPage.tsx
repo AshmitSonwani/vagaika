@@ -50,10 +50,10 @@ export function WishlistPage() {
 
   return (
     <main className="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
-      <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-6 md:mb-8">My Wishlist</h2>
+      <h2 className="text-xl md:text-2xl font-bold text-white mb-6 md:mb-8">My Wishlist</h2>
       {wishlist.length === 0 ? (
         <div className="text-center py-12">
-          <p className="text-gray-500 text-base md:text-lg">Your wishlist is empty</p>
+          <p className="text-white text-base md:text-lg">Your wishlist is empty</p>
         </div>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">

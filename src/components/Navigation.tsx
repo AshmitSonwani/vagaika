@@ -8,6 +8,7 @@ import { useCart } from '../context/CartContext';
 import { useLocation } from 'react-router-dom';
 import { useWishlist } from '../context/WishlistContext';
 import { useState } from 'react';
+import { ThemeToggle } from './ThemeToggle';
 
 export function Navigation() {
   const { state } = useCart();
@@ -29,12 +30,21 @@ export function Navigation() {
           </Link>
           {/* Mobile Menu Button */}
 
-          <button 
+          {/* <button 
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="p-2 text-white md:hidden"
           >
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
+          </button> */}
+          <div className="flex items-center gap-4 md:hidden">
+            <ThemeToggle />
+            <button 
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="p-2 text-gray-600 dark:text-gray-200"
+            >
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
 
           <nav className="hidden md:flex items-center gap-8">
             <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors">
@@ -44,6 +54,7 @@ export function Navigation() {
               Accessories
             </Link>
             <div className="flex items-center gap-4">
+            <ThemeToggle />
             <Link
                   to="/wishlist"
                   className="flex items-center space-x-2 text-gray-300 hover:text-indigo-600 transition-colors"

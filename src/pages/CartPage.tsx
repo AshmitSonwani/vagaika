@@ -12,6 +12,10 @@ export function CartPage() {
     0
   );
 
+  const handleClick = () => {
+    window.location.href = "https://sonwaniashmit.mojo.page/vegaikya";
+  };
+
   return (
     <div className="min-h-screen bg-gray-100 py-8 sm:py-8">
       <div className="max-w-4xl mx-auto px-4">
@@ -38,6 +42,7 @@ export function CartPage() {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className="w-full bg-black text-white py-3 rounded-full font-medium"
+                onClick={handleClick}
               >
                 Proceed to Checkout
               </motion.button>
